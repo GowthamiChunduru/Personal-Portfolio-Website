@@ -6,6 +6,20 @@
     <meta name="viewport" content=
         "width=device-width, initial-scale=1.0">
     <title>HTML Project</title>
+    <script>
+        function validateForm() {
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const message = document.querySelector('textarea').value;
+    
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return false; // Prevent submission
+            }
+            alert("Thank you for submitting your message!");
+            return true; // Allow submission
+        }
+    </script>
 </head>
 <body>
     <!--Header(start)-->
@@ -148,6 +162,18 @@
                                             quantities and click on total button.The program will display your total bill.</p>
                                         <p>Key Skill:Python</p>
                                     </li>
+                                    <li>
+                                        College Management database
+                                        <p>I have created a comprehensive database using SQL.This database effectively organized and stored information related to college management,such as details of students,
+                                            branch,books and login information.I utilized SQL for queries t effectively retrive and manipulate data from the database,allowing for seamless data management and analysis.
+                                        </p>
+                                        <p>Key Skill:SQL</p>
+                                    </li>
+                                    <li>
+                                        Personal Portfolio websitep
+                                        <p>The project has been developed on HTML,CSS,Javascript.the main objective of developing this project is to undeerstand how to use the tags the creation of website.</p>
+                                        <p>Key Skill:HTML,CSS,Javascript</p>
+                                    </li>
                                 </ul>
                             </font>
                         </td>
@@ -243,7 +269,7 @@
                                           
                                     </td>
                                     <td width="70%">
-                                        <button type="Submit">
+                                        <button type="button" onclick="validateForm()">
                                             <font face="Verdana"
                                                 size="4" color="black">
                                                 <b>Submit</b>
@@ -267,4 +293,4 @@
             </td>
         </tr>
     </table>
-    <!--Contact(end)-->    
+    <!--Contact(end)-->
